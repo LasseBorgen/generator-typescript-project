@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Lasse Borgen",
+      "authorEmail": "00alasse@gmail.com",
+      "authorUrl": "https://github.com/LasseBorgen"
+    }
+  }
+}
