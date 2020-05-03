@@ -1,0 +1,45 @@
+{
+  "name": "generator-typescript-project",
+  "version": "0.0.0",
+  "description": "Generator for generic new Typescript projects",
+  "homepage": "",
+  "author": {
+    "name": "Lasse Borgen",
+    "email": "00alasse@gmail.com",
+    "url": "https://github.com/LasseBorgen"
+  },
+  "main": "generators/index.js",
+  "keywords": [
+    "yeoman",
+    "generator",
+    "yeoman-generator"
+  ],
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "yeoman-generator": "^4.9.0",
+    "yosay": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "@types/yeoman-generator": "^3.1.4",
+    "@types/yosay": "0.0.29",
+    "eslint-config-makeable": "^5.1.0",
+    "npm-upgrade": "^2.0.3",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "lint": "eslint --ext .ts generatorsSrc/",
+    "lint:fix": "eslint --fix --ext .ts generatorsSrc/",
+    "build": "tsc",
+    "upgrade": "npm-upgrade"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint-config-makeable"
+    ]
+  },
+  "private": true
+}
