@@ -1,0 +1,22 @@
+{
+  "name": "<%= projectId %>",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint --ext .ts generatorsSrc/",
+    "lint:fix": "eslint --fix --ext .ts generatorsSrc/",
+    "build": "tsc",
+    "upgrade": "npm-upgrade"
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "eslint-config-makeable": "^5.1.0",
+    "npm-upgrade": "^2.0.2",
+    "typescript": "^3.7.5"
+  },
+  "author": "",
+  "license": "ISC"
+}
