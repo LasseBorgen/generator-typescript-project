@@ -4,7 +4,7 @@ import * as chalk from 'chalk';
 const yosay = require('yosay');
 
 class TypescriptGenerator extends Generator {
-    answers: { projectId: string };
+    answers: { projectId?: string };
 
     // I've overridden the default template location to something more sensible
     templatePath(itemPath: string) {
@@ -17,7 +17,7 @@ class TypescriptGenerator extends Generator {
 
     initializing() {
         this.argument('projectId', { type: String, required: false });
-        this.answers = { projectId: this.options.projectId };
+        this.answers = {};
     }
 
     async prompting() {
@@ -28,11 +28,11 @@ class TypescriptGenerator extends Generator {
                 type: 'input',
                 name: 'projectId',
                 message: 'What is the id of the new project?',
-                when: () => this.answers.projectId === undefined,
+                when: () => this.options.projectId === undefined,
             },
         ];
 
-        this.answers = await this.prompt(prompts);
+        this.answers.projectId = this.options.projectId ? this.options.projectId : (await this.prompt(prompts)).projectId;
     }
 
     writing() {
