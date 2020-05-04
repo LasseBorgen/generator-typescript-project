@@ -31,8 +31,6 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "lint": "eslint --ext .ts generatorsSrc/",
-    "lint:fix": "eslint --fix --ext .ts generatorsSrc/",
     "build": "tsc",
     "upgrade": "npm-upgrade"
   },
