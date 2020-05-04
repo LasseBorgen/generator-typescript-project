@@ -36,5 +36,8 @@
         "javascript",
         "typescript"
     ],
-    "editor.snippetSuggestions": "top"
+    "editor.snippetSuggestions": "top",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
 }

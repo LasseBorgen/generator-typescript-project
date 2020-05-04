@@ -15,6 +15,11 @@
     "npm-upgrade": "^2.0.2",
     "typescript": "^3.7.5"
   },
+  "eslintConfig": {
+    "extends": [
+      "eslint-config-makeable"
+    ]
+  },
   "author": "",
   "license": "ISC"
 }
