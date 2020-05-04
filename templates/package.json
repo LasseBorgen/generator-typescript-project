@@ -4,13 +4,11 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "lint": "eslint --ext .ts generatorsSrc/",
-    "lint:fix": "eslint --fix --ext .ts generatorsSrc/",
     "build": "tsc",
     "upgrade": "npm-upgrade"
   },
   "dependencies": {
-    
+
   },
   "devDependencies": {
     "eslint-config-makeable": "^5.1.0",
