@@ -20,6 +20,11 @@ class TypescriptGenerator extends Generator {
         return super.templatePath(`../../../templates/`);
     }
 
+    initializing() {
+        this.argument('projectId', { type: String, required: false });
+        this.answers = { projectId: this.options.projectId };
+    }
+
     async prompting() {
         this.log(yosay(`Welcome to the\n${chalk.red('Generic Typescript project')}\ngenerator!`));
 
@@ -28,6 +33,7 @@ class TypescriptGenerator extends Generator {
                 type: 'input',
                 name: 'projectId',
                 message: 'What is the id of the new project?',
+                when: () => this.answers.projectId.length === 0,
             },
         ];
 
