@@ -32,6 +32,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "make": "npm run upgrade && npm install && npm run build",
     "upgrade": "npm-upgrade"
   },
   "eslintConfig": {

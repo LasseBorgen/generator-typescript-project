@@ -16,7 +16,7 @@ Install the generator globally on your system via npm.
 If you need to make your own local changes, download the project anywhere on your system and link it to your global node_modules directory by running `npm link` in the project root.
 
 ## Building
-Run the `npm run build` command in the project root before executing the generator.
+Run the `npm run make` command in the project root before executing the generator.
 
 ## Executing
 Run the command `yo typescript-project` anywhere on your system to initialize a project in the current working directory.
