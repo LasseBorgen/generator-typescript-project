@@ -6,11 +6,6 @@ const yosay = require('yosay');
 class TypescriptGenerator extends Generator {
     answers: { projectId: string };
 
-    constructor(args, opts) {
-        super(args, opts);
-        this.answers = { projectId: '' };
-    }
-
     // I've overridden the default template location to something more sensible
     templatePath(itemPath: string) {
         return super.templatePath(`../../../templates/${itemPath}`);
@@ -33,7 +28,7 @@ class TypescriptGenerator extends Generator {
                 type: 'input',
                 name: 'projectId',
                 message: 'What is the id of the new project?',
-                when: () => this.answers.projectId.length === 0,
+                when: () => this.answers.projectId === undefined,
             },
         ];
 
